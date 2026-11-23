@@ -1,0 +1,39 @@
+/* index.css: styles for the WHOLE site (loaded in main.jsx).
+   Colours are stored once as variables (--name) and reused everywhere,
+   so you can change the whole look by editing just these lines. */
+
+:root {
+  --bg: #fdf7f2;          /* page background: warm cream */
+  --card-bg: #ffffff;     /* card background */
+  --text: #4a4453;        /* normal text */
+  --heading: #2b2233;     /* headings */
+  --accent: #c2507a;      /* main colour: rose pink */
+  --accent-soft: #f8e3eb; /* light version of the main colour */
+
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Dark mode: used when the computer is set to dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1820;
+    --card-bg: #2a2430;
+    --text: #d8d0de;
+    --heading: #ffffff;
+    --accent: #f08cb3;
+    --accent-soft: #3d2b36;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+/* #root is the box in index.html where React puts the App */
+#root {
+  max-width: 1100px;
+  margin: 0 auto;   /* centre it */
+  padding: 0 16px;  /* space on small screens */
+}

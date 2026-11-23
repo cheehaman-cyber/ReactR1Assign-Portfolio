@@ -1,0 +1,52 @@
+/* App.css: styles for the page layout (header, grid, footer).
+   The card itself is styled in components/ProjectCard.css */
+
+/* ----- Header ----- */
+.hero {
+  text-align: center;
+  padding: 64px 0 40px;
+}
+
+.hero-hello {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-name {
+  margin: 4px 0 12px;
+  font-size: clamp(2.2rem, 6vw, 3.5rem); /* grows with the screen, between 2.2 and 3.5 */
+  color: var(--heading);
+}
+
+.hero-text {
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ----- Projects ----- */
+.section-title {
+  color: var(--heading);
+  font-size: 1.6rem;
+  margin: 0 0 24px;
+}
+
+/* CSS Grid: as many 300px+ columns as fit.
+   Wide screen = 3 cards in a row, phone = 1 card per row. */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* ----- Footer ----- */
+.footer {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.footer a {
+  color: var(--accent);
+  font-weight: 700;
+}
