@@ -2,6 +2,7 @@
 // main.jsx imports App from this file and shows it on the screen.
 
 //  PART 1: IMPORTS (bring things into this file)
+import AboutMe from "./components/AboutMe";             // get my About me component
 import ProjectCard from "./components/ProjectCard";     // get my card component from its own file (must match the folder name exactly)
 import headphonesPic from "./assets/headphones.png";    // real screenshot of project 1 (same way as teacher's profilePic)
 import atmPic from "./assets/atm.svg";                  // project 2: still a placeholder (replace with atm.png later)
@@ -12,7 +13,9 @@ import moonlightPic from "./assets/moonlight.png";      // real screenshot of pr
 function App() {                                        // the whole page
   return (
     <>                                                  {/* fragment: wraps everything */}
-      <h1>My Portfolio</h1>                             {/* page heading */}
+      <AboutMe />                                       {/* who I am: like the teacher's <Profile /> */}
+
+      <h1>My Projects</h1>                              {/* heading above the cards */}
 
       <div className="projects">                        {/* box that holds the 3 cards */}
 

@@ -1,0 +1,31 @@
+/* AboutMe.css: styles for the About me part (like the teacher's Profile.css).
+   Each .name matches a className="name" in AboutMe.jsx */
+
+/* className="about": the whole About me box */
+.about {
+  max-width: 600px;
+  margin: 0 auto 20px;                      /* centre it, space below */
+  text-align: center;
+  padding: 20px;
+}
+
+/* className="aboutImg": my round profile picture */
+.aboutImg {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;                       /* 50% = a circle */
+  object-fit: cover;                        /* crop the photo instead of squashing it */
+  object-position: 30% 30%;                 /* which part to keep: my face (30% from left, 30% from top) */
+  border: 4px solid #c2507a;                /* pink ring around it */
+}
+
+/* className="aboutTitle": "Hi, I'm ..." */
+.aboutTitle {
+  color: #c2507a;
+  font-size: 1.8rem;
+}
+
+/* className="aboutTxt": the text about me */
+.aboutTxt {
+  line-height: 1.6;
+}
