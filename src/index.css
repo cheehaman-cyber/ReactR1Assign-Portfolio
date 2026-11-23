@@ -1,0 +1,45 @@
+/* index.css: simple styles for my portfolio (main.jsx loads this file) */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;           /* simple, clean font */
+  background: #fdf7f2;                      /* light cream page */
+  color: #333;                              /* dark grey text */
+}
+
+h1 {
+  text-align: center;                       /* heading in the middle */
+  color: #c2507a;                           /* rose pink */
+}
+
+/* The box that holds the 3 cards */
+.projects {
+  display: flex;                            /* cards side by side */
+  flex-wrap: wrap;                          /* go to a new line on small screens */
+  justify-content: center;                  /* centre the cards */
+  gap: 20px;                                /* space between cards */
+  padding: 20px;
+}
+
+/* One card */
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;                      /* rounded corners */
+  padding: 16px;                            /* space inside */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+.card img {
+  width: 100%;                              /* picture fills the card width */
+  border-radius: 8px;
+}
+
+.card h2 {
+  color: #c2507a;
+}
+
+.card a {
+  color: #c2507a;
+  font-weight: bold;
+}
