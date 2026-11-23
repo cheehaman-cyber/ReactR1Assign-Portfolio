@@ -1,0 +1,43 @@
+/* ProjectCard.css: styles for ONE card (like the teacher's Profile.css).
+   ProjectCard.jsx imports this file.
+   Each .name below matches a className="name" in ProjectCard.jsx */
+
+/* className="projectCard": the card box */
+.projectCard {
+  width: 300px;
+  background: white;
+  border-radius: 12px;                      /* rounded corners */
+  padding: 16px;                            /* space inside */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+/* className="img": the screenshot */
+.img {
+  width: 100%;                              /* picture fills the card width */
+  border-radius: 8px;
+}
+
+/* className="projectTitle": the project name */
+.projectTitle {
+  color: #c2507a;                           /* rose pink */
+}
+
+/* className="projectTxt": every write-up paragraph */
+.projectTxt {
+  line-height: 1.5;                         /* a bit more space between lines */
+}
+
+/* className="projectLink": the GitHub link */
+.projectLink {
+  display: inline-flex;                     /* icon and text side by side */
+  align-items: center;                      /* line them up in the middle */
+  gap: 6px;                                 /* space between icon and text */
+  color: #c2507a;
+  font-weight: bold;
+}
+
+/* className="icon": the small link icon */
+.icon {
+  width: 18px;
+  height: 18px;
+}

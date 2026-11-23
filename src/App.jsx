@@ -3,9 +3,9 @@
 
 //  PART 1: IMPORTS (bring things into this file)
 import ProjectCard from "./components/ProjectCard";     // get my card component from its own file (must match the folder name exactly)
-import headphonesPic from "./assets/headphones.svg";    // picture for project 1 (same way as teacher's profilePic)
-import atmPic from "./assets/atm.svg";                  // picture for project 2
-import moonlightPic from "./assets/moonlight.svg";      // picture for project 3
+import headphonesPic from "./assets/headphones.png";    // real screenshot of project 1 (same way as teacher's profilePic)
+import atmPic from "./assets/atm.svg";                  // project 2: still a placeholder (replace with atm.png later)
+import moonlightPic from "./assets/moonlight.png";      // real screenshot of project 3
 
 //  PART 2: THE COMPONENT
 // ProjectCard now lives in components/ProjectCard.jsx. App uses it 3 times below.
@@ -43,7 +43,7 @@ function App() {                                        // the whole page
           screenshot={moonlightPic}
           github="https://github.com/cheehaman-cyber/Lesson09Assign-AnimationMoonlight"
           tech="HTML, CSS"
-          whatItDoes="A night sky where the moon and stars move with CSS."
+          whatItDoes="An animated invitation page for a Moonlight Party."
           learned="How to use @keyframes to make animations."
           role="Solo project."
           challenges="Making the animation loop smoothly."
