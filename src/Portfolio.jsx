@@ -12,7 +12,18 @@ function Portfolio() {                                  // the Portfolio PAGE
         return (
             <>
             <h1>My Projects</h1>
-            {selectedProject && <Popup name={selectedProject.name} />}
+            {selectedProject && (
+                <Popup
+                    name={selectedProject.name}
+                    screenshot={selectedProject.screenshot}
+                    github={selectedProject.github}
+                    tech={selectedProject.tech}
+                    whatItDoes={selectedProject.whatItDoes}
+                    learned={selectedProject.learned}
+                    role={selectedProject.role}
+                    challenges={selectedProject.challenges}
+                />
+            )}
             <button onClick={() => setShowProjects(true)}  // when clicked: change showProjects to true
             >
                 Show my projects
