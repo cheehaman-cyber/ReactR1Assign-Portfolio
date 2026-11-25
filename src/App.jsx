@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";              // bring in my Home page (src/Home.jsx)
 import About from "./About";            // bring in my About page (src/About.jsx)
 import Portfolio from "./Portfolio";    // bring in my Portfolio page (src/Portfolio.jsx)
+import Navbar from "./components/Navbar";   // my menu
 
 //  PART 2: THE COMPONENT
 // ProjectCard now lives in components/ProjectCard.jsx. App uses it 3 times below.
@@ -15,6 +16,7 @@ function App() {                                          // the whole site
   // Route         = one rule: address (path) → page (element)
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
