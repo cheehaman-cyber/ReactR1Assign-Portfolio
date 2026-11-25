@@ -22,6 +22,7 @@ function Portfolio() {                                  // the Portfolio PAGE
                     learned={selectedProject.learned}
                     role={selectedProject.role}
                     challenges={selectedProject.challenges}
+                    onClose={() => setSelectedProject(null)}
                 />
             )}
             <button onClick={() => setShowProjects(true)}  // when clicked: change showProjects to true
