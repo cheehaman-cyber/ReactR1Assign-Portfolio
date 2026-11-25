@@ -1,16 +1,26 @@
+import { useState } from "react";     // useState = lets the page REMEMBER a value
 import ProjectCard from "./components/ProjectCard";     // get my card component
 import headphonesPic from "./assets/headphones.png";    // screenshot of project 1
 import atmPic from "./assets/atm.svg";                  // project 2: placeholder (replace with atm.png later)
 import moonlightPic from "./assets/moonlight.png";      // screenshot of project 3
 
+
 function Portfolio() {                                  // the Portfolio PAGE
-    return (
-        <>                                                 
-            <h1>My Projects</h1>                              
-            <div className="projects">
-                <ProjectCard                                    // CARD 1
+    const [showProjects, setShowProjects] = useState(false); // memory: are the projects shown? starts as false = hidden
+        return (
+            <>
+            <h1>My Projects</h1>
+
+            <button onClick={() => setShowProjects(true)}  // when clicked: change showProjects to true
+            >
+                Show my projects
+            </button>
+
+            {showProjects && (                              // IF showProjects is true, THEN show the cards
+                <div className="projects">
+                    <ProjectCard
                     name="HeadPhones"
-                    screenshot={headphonesPic}                    // {curly braces} because it's an imported picture
+                    screenshot={headphonesPic}
                     github="https://github.com/Sharanyadussa-glitch/HeadPhones-Project"
                     tech="HTML, CSS, Git"
                     whatItDoes="A website for a headphones brand with four pages."
@@ -19,7 +29,7 @@ function Portfolio() {                                  // the Portfolio PAGE
                     challenges="Merging everyone's code without breaking it."
                 />
 
-                <ProjectCard                                    // CARD 2
+                        <ProjectCard                                  // CARD 2
                     name="Bank Account (ATM)"
                     screenshot={atmPic}
                     github="https://github.com/cheehaman-cyber/LessonJS05Assign-Objects-and-Scope"
@@ -30,7 +40,7 @@ function Portfolio() {                                  // the Portfolio PAGE
                     challenges="Stopping a withdrawal when there is not enough money."
                 />
 
-                <ProjectCard                                    // CARD 3
+                <ProjectCard                                  // CARD 3
                     name="Moonlight Animation"
                     screenshot={moonlightPic}
                     github="https://github.com/cheehaman-cyber/Lesson09Assign-AnimationMoonlight"
@@ -40,10 +50,11 @@ function Portfolio() {                                  // the Portfolio PAGE
                     role="Solo project."
                     challenges="Making the animation loop smoothly."
                 />
-            </div>
-        </>
-    );
+                </div>
+            )}
+            </>
+        );
 }
                         
 
-export default Portfolio;                         
+export default Portfolio;                         // send Portfolio out so App.jsx can use it
