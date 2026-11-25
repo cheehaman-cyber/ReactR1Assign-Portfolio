@@ -1,0 +1,38 @@
+/* Popup.css: styles for the popup window.
+   Popup.jsx imports this file. */
+
+/* className="popup": the window that floats in the middle */
+.popup {
+  position: fixed;                          /* stays in place, on top of the page */
+  top: 50%;                                 /* move to the middle (up/down)... */
+  left: 50%;                                /* ...and the middle (left/right) */
+  transform: translate(-50%, -50%);         /* exact centre */
+  width: 90%;                               /* fits on phones too... */
+  max-width: 500px;                         /* ...but not too wide on a laptop */
+  max-height: 85vh;                         /* not taller than the screen */
+  overflow-y: auto;                         /* scroll inside if the text is long */
+  background: white;
+  border-radius: 12px;                      /* rounded corners */
+  padding: 20px;
+  box-sizing: border-box;                   /* padding stays inside the width */
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6); /* dark see-through background behind the popup */
+  z-index: 1000;                            /* on top of everything else */
+}
+
+/* The screenshot inside the popup */
+.popup .img {
+  max-height: 250px;                        /* not too tall */
+  object-fit: cover;                        /* fill the space without stretching */
+}
+
+/* The Close button */
+.popup button {
+  float: right;                             /* top right corner */
+  background: #c2507a;                      /* rose pink, like your titles */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;                          /* hand cursor = "you can click me" */
+  margin-bottom: 10px;
+}

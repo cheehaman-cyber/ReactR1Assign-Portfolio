@@ -41,3 +41,8 @@
   width: 18px;
   height: 18px;
 }
+
+/* The card is clickable */
+.projectCard {
+  cursor: pointer;
+}
