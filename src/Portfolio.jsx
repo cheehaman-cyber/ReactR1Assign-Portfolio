@@ -1,4 +1,5 @@
 import { useState } from "react";     // useState = lets the page REMEMBER a value
+import Popup from "./components/Popup";
 import ProjectCard from "./components/ProjectCard";     // get my card component
 import headphonesPic from "./assets/headphones.png";    // screenshot of project 1
 import atmPic from "./assets/atm.svg";                  // project 2: placeholder (replace with atm.png later)
@@ -10,7 +11,7 @@ function Portfolio() {                                  // the Portfolio PAGE
         return (
             <>
             <h1>My Projects</h1>
-
+            <Popup name="HeadPhones" />
             <button onClick={() => setShowProjects(true)}  // when clicked: change showProjects to true
             >
                 Show my projects
