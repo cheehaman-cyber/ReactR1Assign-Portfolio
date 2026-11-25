@@ -7,7 +7,7 @@ import linkIcon from "../assets/link-icon.svg";         // import 2: a picture (
 
 function ProjectCard(props) {                           // props = a box with all the values sent from App.jsx
   return (
-    <div className="projectCard">                       {/* like <div className="profile">: the card box */}
+    <div className="projectCard" onClick={() => props.onSelect(props)}>                     
       <img src={props.screenshot} alt={props.name} className="img" />  {/* like className="img"; screenshot comes from a PROP */}
       <h2 className="projectTitle">{props.name}</h2>    {/* like className="profileTitle" */}
       <p className="projectTxt"><b>Tech used:</b> {props.tech}</p>             {/* like className="profileTxt" */}

@@ -8,10 +8,11 @@ import moonlightPic from "./assets/moonlight.png";      // screenshot of project
 
 function Portfolio() {                                  // the Portfolio PAGE
     const [showProjects, setShowProjects] = useState(false); // memory: are the projects shown? starts as false = hidden
+    const [selectedProject, setSelectedProject] = useState(null);    
         return (
             <>
             <h1>My Projects</h1>
-            <Popup name="HeadPhones" />
+            {selectedProject && <Popup name={selectedProject.name} />}
             <button onClick={() => setShowProjects(true)}  // when clicked: change showProjects to true
             >
                 Show my projects
@@ -21,6 +22,7 @@ function Portfolio() {                                  // the Portfolio PAGE
                 <div className="projects">
                     <ProjectCard
                     name="HeadPhones"
+                    onSelect={setSelectedProject}
                     screenshot={headphonesPic}
                     github="https://github.com/Sharanyadussa-glitch/HeadPhones-Project"
                     tech="HTML, CSS, Git"
@@ -32,6 +34,7 @@ function Portfolio() {                                  // the Portfolio PAGE
 
                         <ProjectCard                                  // CARD 2
                     name="Bank Account (ATM)"
+                    onSelect={setSelectedProject}
                     screenshot={atmPic}
                     github="https://github.com/cheehaman-cyber/LessonJS05Assign-Objects-and-Scope"
                     tech="JavaScript, HTML"
@@ -43,6 +46,7 @@ function Portfolio() {                                  // the Portfolio PAGE
 
                 <ProjectCard                                  // CARD 3
                     name="Moonlight Animation"
+                    onSelect={setSelectedProject}
                     screenshot={moonlightPic}
                     github="https://github.com/cheehaman-cyber/Lesson09Assign-AnimationMoonlight"
                     tech="HTML, CSS"
