@@ -21,3 +21,24 @@ h1 {
   gap: 20px;                                /* space between cards */
   padding: 20px;
 }
+/* className="searchBar": the search box on the Portfolio page */
+.searchBar {
+  display: block;                           /* on its own line */
+  margin: 10px auto;                        /* centred */
+  width: 90%;                               /* fits on phones... */
+  max-width: 400px;                         /* ...not too wide on a laptop */
+  padding: 10px 16px;                       /* space inside the box */
+  font-size: 16px;
+  border: 2px solid #c2507a;                /* rose pink border, like your titles */
+  border-radius: 20px;                      /* round "pill" shape */
+  box-sizing: border-box;
+}
+
+/* When the user clicks into the box */
+.searchBar:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(194, 80, 122, 0.25);  /* soft pink glow */
+}
+.noResults {
+  text-align: center;
+}

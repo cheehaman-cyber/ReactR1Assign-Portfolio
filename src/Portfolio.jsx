@@ -79,7 +79,7 @@ function Portfolio() {                                  // the Portfolio PAGE
                 value={search}                                  // the box always shows what's in memory
                 onChange={(event) => setSearch(event.target.value)}  // each letter typed: save the new text
             />
-            {filteredProjects.length === 0 && <p>No projects found.</p>}  {/* if the list is empty: show a message */}
+            {filteredProjects.length === 0 && <p className="noResults">No projects found.</p>}  {/* if the list is empty: show a message */}
 
             <div className="projects">
                 {filteredProjects.map((project) => (    // for EACH project that passed the filter...
